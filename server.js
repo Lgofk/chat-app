@@ -17,7 +17,7 @@ var express = require('express'),
     port = process.env.PORT || 8080;
 
 mongoose.connect('mongodb://lego:7770203@ds021166.mlab.com:21166/chat');
-app.use(express.static(__dirname + '/front/assets'));
+app.use(express.static(__dirname + '/front'));
 app.use(morgan('dev'));
 
 app.use(bodyParser.urlencoded({
