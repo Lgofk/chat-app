@@ -19,8 +19,8 @@ var express = require('express'),
 process.env.PWD = process.cwd();
 
 mongoose.connect('mongodb://lego:7770203@ds021166.mlab.com:21166/chat');
-app.use(express.static(path.join(process.env.PWD, 'front')));
 app.use(morgan('dev'));
+app.use(express.static(__dirname + '/front'));
 
 app.use(bodyParser.urlencoded({
     extended: true
