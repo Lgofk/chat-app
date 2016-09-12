@@ -25,7 +25,7 @@ angular.module('chat', ['ngRoute', 'ngAnimate', 'ngMaterial', 'ngMessages', 'btf
             .otherwise({
                 redirectTo: '/'
             });
-        $locationProvider.html5Mode(true);
+        // $locationProvider.html5Mode(true);
 
         var main_theme = $mdThemingProvider.extendPalette('cyan', {
             'contrastDefaultColor': 'light'
