@@ -1,0 +1,24 @@
+{
+  "name": "chat-app",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Dmitry Verkhovetsky"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "front/assets/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-material": "^1.1.1",
+    "angular-socket-io": "^0.7.0"
+  }
+}

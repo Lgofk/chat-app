@@ -1,0 +1,53 @@
+<md-content layout="column" layout-fill md-theme="main-theme">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span>Chat app</span>
+            <span flex></span>
+            <span>Hello {{main.userInfo.name}}</span>
+            <md-menu md-position-mode="target-right target">
+                <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button">
+                    <md-icon md-svg-icon="../../assets/img/more-vert.svg"> </md-icon>
+                </md-button>
+                <md-menu-content>
+                    <md-menu-item ng-controller="logoutCtrl as logout">
+                        <md-button ng-click="logout.logout()">Logout</md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </div>
+    </md-toolbar>
+    <main layout="row" flex>
+        <div class="chat-window" flex >
+            <md-card layout-fill>
+                <md-card-header>
+                    <md-card-header-text>
+                        <h1 class="md-title">{{main.userInfo.name}}</h1>
+                    </md-card-header-text>
+                </md-card-header>
+                <md-card-content>
+                    <md-list flex>
+                        <md-list-item class="md-2-line" ng-repeat="message in main.messages track by $index" layout-padding>
+                            <img hide-xs ng-src="{{message.avatar}}" class="md-avatar">
+                            <div class="md-list-item-text">
+                                <h3>{{message.username}}</h3>
+                                <p>{{message.message}}</p>
+                                <hr>
+                                <p class="md-secondary date">{{message.created | date: 'H:m'}}</p>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </md-card-content>
+                <md-card-footer>
+                    <form layout="row" layout-align="center center" ng-submit="main.sendMessage(main.msg)">
+                        <md-input-container class="md-block" flex="70">
+                            <textarea ng-model="main.msg" rows="1"></textarea>
+                        </md-input-container>
+                        <md-button class="md-raised md-primary" type="submit" flex="10" flex-offset="10">
+                            SEND
+                        </md-button>
+                    </form>
+                </md-card-footer>
+            </md-card>
+        </div>
+    </main>
+</md-content>

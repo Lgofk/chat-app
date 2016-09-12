@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:500);
+.background {
+  background: url("../img/start-background.png") no-repeat center center;
+  background-size: cover; }
+
+.sign-header {
+  font-famaily: Roboto;
+  background: #232323;
+  color: #fff;
+  text-transform: uppercase; }
+
+.md-button.md-main-theme-theme.md-primary.md-raised {
+  color: #fff; }
+
+.chat-window {
+  padding: 8px; }
+  .chat-window md-card-header, .chat-window md-card-footer {
+    background-color: #f2f2f2; }
+  .chat-window md-input-container {
+    margin: 0; }
+
+md-card-content {
+  overflow: auto; }
+
+hr {
+  border-top: 1px solid #f2f2f2; }
+
+.date {
+  color: black;
+  opacity: .54;
+  font-size: 12px; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,32 @@
+<md-content class="background" flex layout="row" layout-align="center center" md-theme="main-theme">
+    <md-card>
+        <md-card-header class="sign-header">
+            <md-card-header-text layout-align="center center">
+                <h1 class="md-title">Sign In</h1>
+            </md-card-header-text>
+        </md-card-header>
+        <md-card-content>
+            <form layout="column" class="login-form" name="signInForm" ng-submit="login.signIn()" novalidate>
+                <md-input-container>
+                    <label for="username">Username</label>
+                    <input id="username" type="text" name="username" ng-model="login.loginForm.username" required>
+                    <div ng-messages="signInForm.username.$error">
+                        <div ng-message="required">Username required.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container>
+                    <label for="password">Passport</label>
+                    <input id="password" type="password" name="password" ng-model="login.loginForm.password" required>
+                    <div ng-messages="signInForm.password.$error">
+                        <div ng-message="required">Password required.</div>
+                    </div>
+                </md-input-container>
+                <md-card-actions layout="row" layout-align="center">
+                    <md-button type="submit" class="md-raised md-primary button" flex>Sign In</md-button>
+                    <span flex='5'></span>
+                    <md-button href="/register" class="md-raised md-primary button" flex>Sign Up</md-button>
+                </md-card-actions>
+            </form>
+        </md-card-content>
+    </md-card>
+</md-content>
